@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <a class="visually-hidden-focusable position-absolute top-0 start-0 p-2 bg-body z-3" href="#main">К содержимому</a>
+
+    <header class="navbar border-bottom bg-body sticky-top px-3">
+      <button
+        class="btn btn-outline-secondary d-lg-none me-2"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#sidebar"
+        aria-controls="sidebar"
+        aria-label="Открыть меню"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <span class="navbar-brand mb-0 h1 fs-5">Dashboard</span>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Одна разметка навигации: на lg+ это статичный sidebar, ниже — Offcanvas -->
+        <aside
+          class="col-lg-3 col-xl-2 offcanvas-lg offcanvas-start border-end p-0"
+          id="sidebar"
+          tabindex="-1"
+          aria-labelledby="sidebar-title"
+        >
+          <div class="offcanvas-header">
+            <h2 class="offcanvas-title fs-5" id="sidebar-title">Меню</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              data-bs-target="#sidebar"
+              aria-label="Закрыть"
+            ></button>
+          </div>
+          <nav class="offcanvas-body p-lg-3" aria-label="Основная навигация">
+            <ul class="nav nav-pills flex-column w-100" id="sidebar-nav"></ul>
+          </nav>
+        </aside>
+
+        <main class="col-lg-9 col-xl-10 px-3 px-lg-4 py-3" id="main">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" id="breadcrumbs"></ol>
+          </nav>
+          <div id="view"></div>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

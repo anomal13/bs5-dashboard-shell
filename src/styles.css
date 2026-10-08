@@ -1,0 +1,17 @@
+@media (min-width: 992px) {
+  #sidebar {
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+  }
+}
+
+h1:focus {
+  outline: none;
+}
+
+h1:focus-visible {
+  outline: 2px solid var(--bs-focus-ring-color);
+  outline-offset: 4px;
+}
